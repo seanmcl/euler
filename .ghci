@@ -1,0 +1,8 @@
+
+:set -i..
+:load EulerLib Main
+:set +t
+:module +EulerLib Main 
+-- Ratio 
+-- Test.QuickCheck
+

@@ -1,0 +1,7 @@
+
+:set -i..
+:load EulerLib
+:load Main
+:set +t
+:module +EulerLib Main
+

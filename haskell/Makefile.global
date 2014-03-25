@@ -1,0 +1,35 @@
+# -*- Mode: Makefile -*-
+
+GHC_EXTENSIONS = \
+-XScopedTypeVariables
+
+GHC_WARNINGS = \
+-fwarn-deprecations \
+-fwarn-dodgy-imports \
+-fwarn-hi-shadowing \
+-fwarn-implicit-prelude \
+-fwarn-incomplete-patterns \
+-fwarn-missing-fields \
+-fwarn-missing-methods \
+-fwarn-missing-signatures \
+-fwarn-orphans \
+-fwarn-overlapping-patterns \
+-fwarn-tabs \
+-fwarn-unused-binds \
+-fwarn-unused-imports \
+-fwarn-unused-matches \
+-fno-warn-incomplete-record-updates \
+-fno-warn-simple-patterns \
+-fno-warn-monomorphism-restriction \
+-fno-warn-type-defaults \
+
+PROFILE = # -prof -auto-all
+
+Euler : *.lhs ../EulerLib.lhs ../Makefile.global
+	ghc -i.. --make Main.lhs $(PROFILE) $(GHC_WARNINGS) $(GHC_EXTENSIONS) -o Euler
+
+ghci :
+	ghci -i.. $(GHC_EXTENSIONS) Main
+
+clean : 
+	-rm -rf *.o *.hi Euler a.out

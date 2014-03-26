@@ -1,11 +1,7 @@
-#include "gmpxx.h"
-#include <iostream>
-#include <string>
+// This version is ~20X slower than the int64_t version.
 
-using std::string;
-using std::cout;
-using std::cerr;
-using std::endl;
+#include "gmpxx.h"
+#include "util.h"
 
 int main(int argc, char** argv) {
   string maxs;

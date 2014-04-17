@@ -19,7 +19,6 @@ GHC_WARNINGS = \
 -fwarn-unused-imports \
 -fwarn-unused-matches \
 -fno-warn-incomplete-record-updates \
--fno-warn-simple-patterns \
 -fno-warn-monomorphism-restriction \
 -fno-warn-type-defaults \
 
@@ -31,5 +30,5 @@ Euler : *.lhs ../EulerLib.lhs ../Makefile.global
 ghci :
 	ghci -i.. $(GHC_EXTENSIONS) Main
 
-clean : 
+clean :
 	-rm -rf *.o *.hi Euler a.out
